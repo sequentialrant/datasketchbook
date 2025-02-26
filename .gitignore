@@ -1,0 +1,24 @@
+# Quarto and R specific files
+.quarto/
+/_site/
+/.quarto/
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+.Rdata
+.httr-oauth
+.Rproj.user/
+*_cache/
+/cache/
+
+# Office temporary files
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+.~lock.*#
+
+# System files
+.DS_Store
+Thumbs.db
