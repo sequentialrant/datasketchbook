@@ -30,7 +30,7 @@ showtext_auto()
 
 
 pins4 <- read_delim(
-  "HIBP 4 digit wordlist heat.txt", delim = " : ", col_names = FALSE
+  "data/HIBP-4-digit-list.txt", delim = " : ", col_names = FALSE
 )
 colnames(pins4) <- c("pin", "count")
 
@@ -153,9 +153,9 @@ p <- ggplot(pins4, aes(x = last2, y = first2, fill = count)) +
       barheight = 0.5
     )
   )
-
-p
 ```
+
+![Four Digit Pin Usage](./images/Four-Digit-Pin-usage.png)
 
 Most common four-digit PIN according to the data published by [Have I Been Pwned](https://haveibeenpwned.com/), is **1234**. The table below shows the top 10 **most** and **least** used PINs, and their frequency of usage.
 

@@ -106,6 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Most Common 4-digit PIN – The Data Sketchbook">
 <meta property="og:description" content="">
+<meta property="og:image" content="./images/Four-Digit-Pin-usage.png">
 <meta property="og:site_name" content="The Data Sketchbook">
 </head>
 
@@ -201,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>pins4 <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"HIBP 4 digit wordlist heat.txt"</span>, <span class="at">delim =</span> <span class="st">" : "</span>, <span class="at">col_names =</span> <span class="cn">FALSE</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/HIBP-4-digit-list.txt"</span>, <span class="at">delim =</span> <span class="st">" : "</span>, <span class="at">col_names =</span> <span class="cn">FALSE</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pins4) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pin"</span>, <span class="st">"count"</span>)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
@@ -323,10 +324,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>      <span class="at">barwidth =</span> <span class="dv">10</span>,</span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>      <span class="at">barheight =</span> <span class="fl">0.5</span></span>
 <span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/Four-Digit-Pin-usage.png" class="img-fluid figure-img"></p>
+<figcaption>Four Digit Pin Usage</figcaption>
+</figure>
 </div>
 <p>Most common four-digit PIN according to the data published by <a href="https://haveibeenpwned.com/">Have I Been Pwned</a>, is <strong>1234</strong>. The table below shows the top 10 <strong>most</strong> and <strong>least</strong> used PINs, and their frequency of usage.</p>
 <table class="caption-top table">
@@ -566,7 +571,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/sequentialrant\.github\.io\/datasketchbook\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -925,7 +930,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>pins4 <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">"HIBP 4 digit wordlist heat.txt"</span>, <span class="at">delim =</span> <span class="st">" : "</span>, <span class="at">col_names =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/HIBP-4-digit-list.txt"</span>, <span class="at">delim =</span> <span class="st">" : "</span>, <span class="at">col_names =</span> <span class="cn">FALSE</span></span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(pins4) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pin"</span>, <span class="st">"count"</span>)</span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
@@ -1048,9 +1053,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>      <span class="at">barheight =</span> <span class="fl">0.5</span></span>
 <span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>p</span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="al">![Four Digit Pin Usage](./images/Four-Digit-Pin-usage.png)</span></span>
 <span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>Most common four-digit PIN according to the data published by <span class="co">[</span><span class="ot">Have I Been Pwned</span><span class="co">](https://haveibeenpwned.com/)</span>, is **1234**. The table below shows the top 10 **most** and **least** used PINs, and their frequency of usage.</span>
 <span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a></span>
