@@ -1,0 +1,38 @@
+---
+sidebar: false
+description: "A collection of technical blogs and talks on machine learning and data science."
+image: quarto.png
+toc: true
+listing:
+  date-format: long
+  feed: false
+  filter-ui: false
+  type: table
+  sort-ui: false
+  sort: "date desc"
+  categories: false
+  fields: [date, title]
+  id: blog-listings
+  # contents: [blog_data/blogs.yml, blog/posts]
+  contents: ["posts/"]
+aliases: ["posts/"]
+format:
+  html:
+    anchor-sections: true
+---
+
+<!-- ::: {layout="[21,79]" .profile-header} -->
+
+<!-- ![](srinidhi.JPG){.profile-pic} -->
+
+### **👋 Welcome to The Data Sketchbook**
+
+I am a computational scientist with a focus on data science. I started this blog to document my learnings related to data visualization and causal AI. Some posts feature reproductions of visualizations from [Flowing Data](https://flowingdata.com/) and insights from books I am studying, such as [*The Visual Display of Quantitative Information*](https://shorturl.at/2MEDn) and [*Effective Visualization*](https://shorturl.at/ClxpM).
+
+Recently, I took a break from the industry to explore the use of LLMs in Automated Program Repair and Software Engineering education at [SUTD](https://www.sutd.edu.sg/). You can find the report [here](https://arxiv.org/abs/2501.09694).
+
+Previously, I worked on developing medical risk prediction models and conducted research in computational neuroscience at the Max Planck Institute.
+
+### **Posts**
+::: {#blog-listings}
+::: 

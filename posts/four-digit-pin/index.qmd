@@ -1,0 +1,173 @@
+---
+title: "Most Common 4-digit PIN"
+# description: "Most common four-digit PIN according to the data published by [Have I Been Pwned](https://haveibeenpwned.com/)"
+# categories: [Writing]
+author: Srinidhi Havaldar
+date: 2025-02-21
+toc: true
+format:
+  html: 
+    code-fold: true
+    code-tools: true
+# image: content_2.png
+# draft: false
+# order: 1
+---
+```{R}
+#| echo: true
+#| output: false
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(ggnewscale)
+library(ggrepel)
+library(scales)
+library(showtext)
+
+font_add_google("Roboto Condensed", "roboto")
+font_add_google("Inter", "inter")
+showtext_auto()
+
+
+pins4 <- read_delim(
+  "HIBP 4 digit wordlist heat.txt", delim = " : ", col_names = FALSE
+)
+colnames(pins4) <- c("pin", "count")
+
+pins4 <- pins4 |>
+  mutate(first2 = substr(pin, 1, 2), last2 = substr(pin, 3, 4))
+
+# Get most and least common PINs
+most_common <- pins4 |> arrange(desc(count)) |> slice(1)
+least_common <- pins4 |> arrange(count) |> slice(1)
+
+# Get most and least common PINs
+most_common <- pins4 |> arrange(desc(count)) |> slice(1)
+least_common <- pins4 |> arrange(count) |> slice(1)
+
+p <- ggplot(pins4, aes(x = last2, y = first2, fill = count)) +
+  geom_tile() +
+  coord_fixed(ratio = 1) +
+  scale_fill_gradient(
+    low = "black",
+    high = "#c84072",
+    trans = "log1p",
+    breaks = c(1e3, 1e4, 1e5, 1e6, 2.5e6),
+    labels = c("1K", "10K", "100K", "1M", "2.5M"),
+    name = "PIN USAGE"
+  ) +
+  scale_x_discrete(breaks = function(x) x[seq(1, length(x), by = 5)]) +
+  scale_y_discrete(breaks = function(x) x[seq(1, length(x), by = 5)]) +
+  # Add annotations
+  geom_text(
+    data = most_common,
+    aes(label = pin),
+    color = "yellow",
+    hjust = 0,
+    nudge_x = 1,
+    size = 3
+  ) +
+  geom_text(
+    data = most_common,
+    aes(label = paste0("most-common")),
+    color = "yellow",
+    vjust = -1,
+    nudge_x = 2,
+    size = 3
+  ) +
+  geom_point(
+    data = most_common,
+    aes(x = last2, y = first2),
+    color = "yellow",
+    fill = "yellow",
+    shape = 21,
+    size = 0.4,
+    stroke = 1
+  ) +
+  geom_text(
+    data = least_common,
+    aes(label = pin),
+    color = "yellow",
+    hjust = 0,
+    nudge_x = 1,
+    size = 3
+  ) +
+  geom_text(
+    data = least_common,
+    aes(label = paste0("least-common")),
+    color = "yellow",
+    vjust = -1,
+    nudge_x = 2,
+    size = 3
+  ) +
+  geom_point(
+    data = least_common,
+    aes(x = last2, y = first2),
+    color = "yellow",
+    fill = "yellow",
+    shape = 21,
+    size = 0.4,
+    stroke = 1
+  ) +
+  labs(
+    title = "Four-Digit PIN Usage",
+    x = "LAST TWO DIGITS",
+    y = "FIRST TWO DIGITS"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(
+      face = "bold", size = 15,
+      hjust = -0.16, family = "roboto",
+      color = "gray20"
+    ),
+    axis.title = element_text(face = "bold", size = 12),
+    axis.text = element_text(size = 10, color = "gray50"),
+    axis.ticks = element_line(color = "gray50"),
+    axis.title.x = element_text(
+      family = "roboto", hjust = 0,
+      vjust = -1, size = 8,
+      color = "gray30"
+    ),
+    axis.title.y = element_text(
+      family = "roboto", hjust = 0,
+      vjust = 1, size = 8,
+      color = "gray30"
+    ),
+    legend.title = element_text(
+      face = "bold", family = "roboto",
+      size = 10, color = "gray30"
+    ),
+    legend.text = element_text(
+      family = "inter", size = 6,
+      color = "gray20"
+    ),
+    legend.position = "top",
+    legend.justification = c(1, 1),
+  ) +
+  guides(
+    fill = guide_colorbar(
+      title.position = "top",
+      title.hjust = 0,
+      barwidth = 10,
+      barheight = 0.5
+    )
+  )
+
+p
+```
+
+Most common four-digit PIN according to the data published by [Have I Been Pwned](https://haveibeenpwned.com/), is **1234**. The table below shows the top 10 **most** and **least** used PINs, and their frequency of usage.
+
+| **Rank** | **Most Common PIN** | **Usage %** | **Least Common PIN** | **Usage %** |
+|:---------:|:--------------------:|:-----------:|:-------------------:|:-----------:|
+| 1       | 1234               | 9.0089    | 0849              | 0.0018    |
+| 2       | 1111               | 1.5762    | 0839              | 0.0018    |
+| 3       | 0000               | 1.1215    | 0639              | 0.0019    |
+| 4       | 1342               | 0.5757    | 0649              | 0.0019    |
+| 5       | 1212               | 0.4019    | 0738              | 0.0019    |
+| 6       | 2222               | 0.2892    | 0837              | 0.0019    |
+| 7       | 4444               | 0.2865    | 0859              | 0.0020    |
+| 8       | 1122               | 0.2744    | 0867              | 0.0020    |
+| 9       | 1986               | 0.2741    | 0662              | 0.0020    |
+| 10      | 2020               | 0.2704    | 0438              | 0.0021    |

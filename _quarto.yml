@@ -1,0 +1,33 @@
+project:
+  type: website
+
+execute:
+  freeze: auto
+
+website:
+  title: "The Data Sketchbook"
+  navbar:
+    right:
+      # - about.qmd
+      - icon: github
+        href: https://github.com/sequentialrant
+      - icon: twitter
+        href: https://twitter.com/sequentialrant
+favicon: favicon.ico
+open-graph: true
+# site-url: "https://datasketchbook.dev/"
+# repo-url: https://github.com/sequentialrant/datasketchbook
+
+format:
+  html:
+    theme:
+      light: [solarized-light, custom.scss]
+      # - solarized-light
+      # - html/styles.scss
+      # - cosmo
+      # - brand
+    # css: styles.css
+    toc: true
+
+
+
