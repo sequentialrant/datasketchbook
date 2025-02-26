@@ -1,7 +1,10 @@
-# Quarto and R specific files
+# Quarto and system files
 .quarto/
+.gitignore
 /_site/
 /.quarto/
+
+# R specific files
 .Rproj.user
 .Rhistory
 .RData
