@@ -6,6 +6,7 @@ execute:
 
 website:
   title: "The Data Sketchbook"
+  google-analytics: 'G-4BTEYBVWPE'
   navbar:
     right:
       # - about.qmd
