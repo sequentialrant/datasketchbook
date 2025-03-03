@@ -6,15 +6,18 @@ execute:
 
 website:
   title: "The Data Sketchbook"
+  favicon: "favicon.ico"
   google-analytics: 'G-4BTEYBVWPE'
+  site-url: https://www.datasketchbook.com
+  repo-url: https://github.com/sequentialrant/datasketchbook
   navbar:
+    logo: "favicon.ico"
     right:
       # - about.qmd
       - icon: github
         href: https://github.com/sequentialrant
       - icon: twitter
         href: https://twitter.com/sequentialrant
-favicon: favicon.ico
 open-graph: true
 # site-url: "https://datasketchbook.dev/"
 # repo-url: https://github.com/sequentialrant/datasketchbook
@@ -22,13 +25,20 @@ open-graph: true
 format:
   html:
     theme:
-      light: [solarized-light, custom.scss]
+      # light: [solarized-light, custom.scss]
       # - solarized-light
       # - html/styles.scss
       # - cosmo
       # - brand
     # css: styles.css
+      light:
+        - litera
+        - custom.scss
+      dark:
+        - darkly
+        - custom.scss
     toc: true
+    smooth-scroll: true
 
 
 

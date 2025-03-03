@@ -1,8 +1,26 @@
+// /*-- scss:defaults --*/
+// $font-family-sans-serif: arial;
+// $link-color: #0d3eb0;
+// $code-color: rgb(86, 51, 51);
+// $code-block-bg: #efe8e8;
+// $navbar-bg: #212529;
+// $navbar-fg: #e0e6e6;
+// $body-bg:  #fdfdec; /*-- #f5f4f4; --*/
 /*-- scss:defaults --*/
-$font-family-sans-serif: arial;
-$link-color: #0d3eb0;
-$code-color: rgb(86, 51, 51);
-$code-block-bg: #efe8e8;
-$navbar-bg: #212529;
-$navbar-fg: #e0e6e6;
-$body-bg:  #fdfdec; /*-- #f5f4f4; --*/
+// import google fonts
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap';
+
+// use Atkinson Hyperlegible font if available
+$font-family-sans-serif: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+/*-- scss:rules --*/
+// litera is serif by default: revert to san-serif
+p {
+  font-family: $font-family-sans-serif;
+}
+
+.navbar > .container-xxl, .navbar > .container-xl, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container, .navbar > .container-fluid {
+  max-width: 1145px;
+  margin: 0 auto;
+}
