@@ -1,1 +1,1 @@
-Sitemap: https://www.datasketchbook.com/sitemap.xml
+Sitemap: https://sequentialrant.github.io/datasketchbook/sitemap.xml

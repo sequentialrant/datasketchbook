@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.datasketchbook.com/about.html</loc>
+    <loc>https://sequentialrant.github.io/datasketchbook/about.html</loc>
     <lastmod>2025-02-26T12:08:45.477Z</lastmod>
   </url>
   <url>
-    <loc>https://www.datasketchbook.com/posts/four-digit-pin/index.html</loc>
+    <loc>https://sequentialrant.github.io/datasketchbook/posts/four-digit-pin/index.html</loc>
     <lastmod>2025-02-26T12:08:45.479Z</lastmod>
   </url>
   <url>
-    <loc>https://www.datasketchbook.com/index.html</loc>
+    <loc>https://sequentialrant.github.io/datasketchbook/index.html</loc>
     <lastmod>2025-02-26T12:08:45.478Z</lastmod>
   </url>
 </urlset>
