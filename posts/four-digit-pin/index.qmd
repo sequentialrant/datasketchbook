@@ -2,13 +2,13 @@
 title: "Most Common 4-digit PIN"
 # description: "Most common four-digit PIN according to the data published by [Have I Been Pwned](https://haveibeenpwned.com/)"
 # categories: [Writing]
-author: Srinidhi Havaldar
+author: mooda
 date: 2025-02-21
 toc: true
 format:
   html: 
     code-fold: true
-    code-tools: true
+    code-tools: false
 # image: content_2.png
 # draft: false
 # order: 1
