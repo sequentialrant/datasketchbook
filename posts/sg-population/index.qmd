@@ -1,0 +1,20 @@
+---
+title: "Singapore Population Pyramid (1970-2024)"
+author: Kanttliga
+date: 2025-03-21
+toc: true
+format:
+  html: 
+    code-fold: false
+    code-tools: false
+# image: content_2.png
+# draft: false
+# order: 1
+---
+Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.
+
+![](./images/sg-population-pyramid.gif)
+
+<div style="text-align: right; font-size: 12px"> SOURCE: [DEPARTMENT OF STATISTICS, Singapore](https://tablebuilder.singstat.gov.sg/table/TS/M810671) </div>
+
+<!-- SOURCE: [DEPARTMENT OF STATISTICS, Singapore](https://tablebuilder.singstat.gov.sg/table/TS/M810671) -->
