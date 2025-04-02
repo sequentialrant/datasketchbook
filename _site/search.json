@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/sg-population/index.html",
+    "href": "posts/sg-population/index.html",
+    "title": "Singapore Population Pyramid (1970-2024)",
+    "section": "",
+    "text": "Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.\n\n\nSOURCE: DEPARTMENT OF STATISTICS, Singapore"
+  },
+  {
     "objectID": "posts/four-digit-pin/index.html",
     "href": "posts/four-digit-pin/index.html",
     "title": "Most Common 4-digit PIN",
@@ -12,12 +19,5 @@
     "title": "The Data Sketchbook",
     "section": "",
     "text": "👋 Welcome to The Data Sketchbook\nI am a computational scientist with a focus on data science. I started this blog to document my learnings related to data visualization and causal AI. Some posts feature reproductions of visualizations from Flowing Data and insights from books I am studying, such as The Visual Display of Quantitative Information and Effective Visualization.\nRecently, I took a break from the industry to explore the use of LLMs in Automated Program Repair and Software Engineering education at SUTD. You can find the report here.\nPreviously, I worked on developing medical risk prediction models and conducted research in computational neuroscience at the Max Planck Institute.\n\n\nPosts\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nMarch 21, 2025\n\n\nSingapore Population Pyramid (1970-2024)\n\n\n\n\nFebruary 21, 2025\n\n\nMost Common 4-digit PIN\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/sg-population/index.html",
-    "href": "posts/sg-population/index.html",
-    "title": "Singapore Population Pyramid (1970-2024)",
-    "section": "",
-    "text": "Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.\n\n\nSOURCE: DEPARTMENT OF STATISTICS, Singapore"
   }
 ]
