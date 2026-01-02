@@ -1,6 +1,7 @@
 # Quarto and system files
 .quarto/
 .gitignore
+CLAUDE.md
 /_site/
 /.quarto/
 
