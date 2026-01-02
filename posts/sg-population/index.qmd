@@ -1,6 +1,6 @@
 ---
-title: "The Living Shape of Data: Animate Your Pyramid Charts"
-author: Srinidhi
+title: "Singapore Population Pyramid (1970-2024)"
+author: Kanttliga
 date: 2025-03-21
 toc: true
 format:
@@ -11,17 +11,7 @@ format:
 # draft: false
 # order: 1
 ---
-When comparing two distinct groups, like Men vs. Women or Product A vs. Product B, the standard bar chart often falls short. It shows you the volume, but it does not always show you the structure. 
-
-Enter the Pyramid Chart. 
-
-At its core, a pyramid chart is deceptively simple. It is two bar charts joined by a central spine, facing opposite directions. It is the gold standard for demographic data because it allows our eyes to instantly compare the symmetry (or asymmetry) between two groups. But the real magic happens when you animate it.
-
-A static pyramid chart is a snapshot in time. It tells you what the population looked like in 1990. But data rarely sits still. Populations age, customer bases shift, and trends evolve.
-
-When you apply animation to a pyramid chart over a time axis, you stop looking at bars and start looking at a shifting silhouette.
-
-Singapore Population Pyramid (1970-2024): Watch how, in the earlier years, the pyramid sits on a wide base, indicating a predominantly young population. As the animation progresses into later years, that base narrows while the upper sections expand. You can literally see the "weight" of the population shift upward as the distribution moves from young to old.
+Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.
 
 ![](./images/sg-population-pyramid.gif)
 
