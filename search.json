@@ -1,16 +1,65 @@
 [
   {
-    "objectID": "posts/sg-population/index.html",
-    "href": "posts/sg-population/index.html",
-    "title": "Singapore Population Pyramid (1970-2024)",
+    "objectID": "CLAUDE.html",
+    "href": "CLAUDE.html",
+    "title": "CLAUDE.md",
     "section": "",
-    "text": "Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.\n\n\nSOURCE: DEPARTMENT OF STATISTICS, Singapore"
+    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is “The Data Sketchbook” - a Quarto-based website for technical blogs and talks on machine learning and data science. The site features reproductions of data visualizations and insights from data visualization books.\n\n\n\n\nQuarto Website: The site uses Quarto’s website project type with automatic execution freezing\nContent Structure: Blog posts are stored in posts/ directory, each in its own folder with index.qmd and an images/ subdirectory\nStyling: Uses Bootstrap themes (Litera for light mode, Darkly for dark mode) with custom SCSS overrides in custom.scss\nBuild Output: Generated site files are placed in _site/ directory\n\n\n\n\n\n_quarto.yml: Main configuration file defining website structure, themes, and build settings\nindex.qmd: Homepage with blog listing configuration using Quarto’s listing feature\ncustom.scss: Custom styling that imports Atkinson Hyperlegible and Fira Code fonts\nposts/*/index.qmd: Individual blog post files with YAML frontmatter\n\n\n\n\n\n\nquarto preview              # Start development server with live reload\nquarto render               # Build the entire website to _site/\nquarto publish              # Publish to configured hosting service\n\n\n\nquarto create-project blog  # Create new blog post structure\n\n\n\n\n\nBlog posts use YAML frontmatter with title, author, date, and toc fields\nImages should be placed in posts/{post-name}/images/ directory\nThe site uses automatic execution freezing (freeze: auto) to cache computational results\nCustom fonts (Atkinson Hyperlegible for body text, Fira Code for code) are loaded via Google Fonts\nGoogle Analytics is configured with ID ‘G-4BTEYBVWPE’\n\n\n\n\n\nPosts focus on data visualization, machine learning, and data science topics\nInclude proper attribution for data sources\nUse relative paths for images within post directories\nFollow the established naming convention for post directories (lowercase with hyphens)"
+  },
+  {
+    "objectID": "CLAUDE.html#project-overview",
+    "href": "CLAUDE.html#project-overview",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "This is “The Data Sketchbook” - a Quarto-based website for technical blogs and talks on machine learning and data science. The site features reproductions of data visualizations and insights from data visualization books."
+  },
+  {
+    "objectID": "CLAUDE.html#architecture",
+    "href": "CLAUDE.html#architecture",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Quarto Website: The site uses Quarto’s website project type with automatic execution freezing\nContent Structure: Blog posts are stored in posts/ directory, each in its own folder with index.qmd and an images/ subdirectory\nStyling: Uses Bootstrap themes (Litera for light mode, Darkly for dark mode) with custom SCSS overrides in custom.scss\nBuild Output: Generated site files are placed in _site/ directory"
+  },
+  {
+    "objectID": "CLAUDE.html#key-files",
+    "href": "CLAUDE.html#key-files",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "_quarto.yml: Main configuration file defining website structure, themes, and build settings\nindex.qmd: Homepage with blog listing configuration using Quarto’s listing feature\ncustom.scss: Custom styling that imports Atkinson Hyperlegible and Fira Code fonts\nposts/*/index.qmd: Individual blog post files with YAML frontmatter"
+  },
+  {
+    "objectID": "CLAUDE.html#common-commands",
+    "href": "CLAUDE.html#common-commands",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "quarto preview              # Start development server with live reload\nquarto render               # Build the entire website to _site/\nquarto publish              # Publish to configured hosting service\n\n\n\nquarto create-project blog  # Create new blog post structure"
+  },
+  {
+    "objectID": "CLAUDE.html#development-notes",
+    "href": "CLAUDE.html#development-notes",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Blog posts use YAML frontmatter with title, author, date, and toc fields\nImages should be placed in posts/{post-name}/images/ directory\nThe site uses automatic execution freezing (freeze: auto) to cache computational results\nCustom fonts (Atkinson Hyperlegible for body text, Fira Code for code) are loaded via Google Fonts\nGoogle Analytics is configured with ID ‘G-4BTEYBVWPE’"
+  },
+  {
+    "objectID": "CLAUDE.html#content-guidelines",
+    "href": "CLAUDE.html#content-guidelines",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Posts focus on data visualization, machine learning, and data science topics\nInclude proper attribution for data sources\nUse relative paths for images within post directories\nFollow the established naming convention for post directories (lowercase with hyphens)"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "The Data Sketchbook",
     "section": "",
-    "text": "👋 Welcome to The Data Sketchbook\nI am a computational scientist with a focus on data science. I started this blog to document my learnings related to data visualization and causal AI. Some posts feature reproductions of visualizations from Flowing Data and insights from books I am studying, such as The Visual Display of Quantitative Information and Effective Visualization.\nRecently, I took a break from the industry to explore the use of LLMs in Automated Program Repair and Software Engineering education at SUTD. You can find the report here.\nPreviously, I worked on developing medical risk prediction models and conducted research in computational neuroscience at the Max Planck Institute.\n\n\nPosts\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nMarch 21, 2025\n\n\nSingapore Population Pyramid (1970-2024)\n\n\n\n\n\nNo matching items"
+    "text": "👋 Welcome to The Data Sketchbook\nHi, my name is Srinidhi. My interests are in data-driven decision science and systems programming. I started this blog to document my learning.\n\n\nPosts\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nMarch 21, 2025\n\n\nThe Living Shape of Data: Animate Your Pyramid Charts\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/sg-population/index.html",
+    "href": "posts/sg-population/index.html",
+    "title": "The Living Shape of Data: Animate Your Pyramid Charts",
+    "section": "",
+    "text": "When comparing two distinct groups, like Men vs. Women or Product A vs. Product B, the standard bar chart often falls short. It shows you the volume, but it does not always show you the structure.\nEnter the Pyramid Chart.\nAt its core, a pyramid chart is deceptively simple. It is two bar charts joined by a central spine, facing opposite directions. It is the gold standard for demographic data because it allows our eyes to instantly compare the symmetry (or asymmetry) between two groups. But the real magic happens when you animate it.\nA static pyramid chart is a snapshot in time. It tells you what the population looked like in 1990. But data rarely sits still. Populations age, customer bases shift, and trends evolve.\nWhen you apply animation to a pyramid chart over a time axis, you stop looking at bars and start looking at a shifting silhouette.\nSingapore Population Pyramid (1970-2024): Watch how, in the earlier years, the pyramid sits on a wide base, indicating a predominantly young population. As the animation progresses into later years, that base narrows while the upper sections expand. You can literally see the “weight” of the population shift upward as the distribution moves from young to old.\n\n\nSOURCE: DEPARTMENT OF STATISTICS, Singapore"
   }
 ]

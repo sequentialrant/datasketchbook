@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Srinidhi">
-<meta name="dcterms.date" content="2025-03-21">
 
-<title>The Living Shape of Data: Animate Your Pyramid Charts – The Data Sketchbook</title>
+<title>claude – The Data Sketchbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-dc4b5b3a5069bba27a88d52ecad5421b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-15a791ac779c8265f2732131127e08f2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-dc4b5b3a5069bba27a88d52ecad5421b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-15a791ac779c8265f2732131127e08f2.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,9 +115,8 @@ gtag('config', 'G-4BTEYBVWPE', { 'anonymize_ip': true});
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<meta property="og:title" content="The Living Shape of Data: Animate Your Pyramid Charts – The Data Sketchbook">
+<meta property="og:title" content="The Data Sketchbook">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://sequentialrant.github.io/datasketchbook/posts/sg-population/images/sg-population-pyramid.gif">
 <meta property="og:site_name" content="The Data Sketchbook">
 </head>
 
@@ -96,10 +127,10 @@ gtag('config', 'G-4BTEYBVWPE', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../favicon.ico" alt="" class="navbar-logo">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./favicon.ico" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">The Data Sketchbook</span>
     </a>
   </div>
@@ -131,56 +162,93 @@ gtag('config', 'G-4BTEYBVWPE', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#claude.md" id="toc-claude.md" class="nav-link active" data-scroll-target="#claude.md">CLAUDE.md</a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
+  <li><a href="#key-files" id="toc-key-files" class="nav-link" data-scroll-target="#key-files">Key Files</a></li>
+  <li><a href="#common-commands" id="toc-common-commands" class="nav-link" data-scroll-target="#common-commands">Common Commands</a>
+  <ul class="collapse">
+  <li><a href="#building-and-serving" id="toc-building-and-serving" class="nav-link" data-scroll-target="#building-and-serving">Building and Serving</a></li>
+  <li><a href="#content-management" id="toc-content-management" class="nav-link" data-scroll-target="#content-management">Content Management</a></li>
+  </ul></li>
+  <li><a href="#development-notes" id="toc-development-notes" class="nav-link" data-scroll-target="#development-notes">Development Notes</a></li>
+  <li><a href="#content-guidelines" id="toc-content-guidelines" class="nav-link" data-scroll-target="#content-guidelines">Content Guidelines</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">The Living Shape of Data: Animate Your Pyramid Charts</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Srinidhi </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 21, 2025</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
+<section id="claude.md" class="level1">
+<h1>CLAUDE.md</h1>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>This is “The Data Sketchbook” - a Quarto-based website for technical blogs and talks on machine learning and data science. The site features reproductions of data visualizations and insights from data visualization books.</p>
+</section>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+<ul>
+<li><strong>Quarto Website</strong>: The site uses Quarto’s website project type with automatic execution freezing</li>
+<li><strong>Content Structure</strong>: Blog posts are stored in <code>posts/</code> directory, each in its own folder with <code>index.qmd</code> and an <code>images/</code> subdirectory</li>
+<li><strong>Styling</strong>: Uses Bootstrap themes (Litera for light mode, Darkly for dark mode) with custom SCSS overrides in <code>custom.scss</code></li>
+<li><strong>Build Output</strong>: Generated site files are placed in <code>_site/</code> directory</li>
+</ul>
+</section>
+<section id="key-files" class="level2">
+<h2 class="anchored" data-anchor-id="key-files">Key Files</h2>
+<ul>
+<li><code>_quarto.yml</code>: Main configuration file defining website structure, themes, and build settings</li>
+<li><code>index.qmd</code>: Homepage with blog listing configuration using Quarto’s listing feature</li>
+<li><code>custom.scss</code>: Custom styling that imports Atkinson Hyperlegible and Fira Code fonts</li>
+<li><code>posts/*/index.qmd</code>: Individual blog post files with YAML frontmatter</li>
+</ul>
+</section>
+<section id="common-commands" class="level2">
+<h2 class="anchored" data-anchor-id="common-commands">Common Commands</h2>
+<section id="building-and-serving" class="level3">
+<h3 class="anchored" data-anchor-id="building-and-serving">Building and Serving</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview              <span class="co"># Start development server with live reload</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render               <span class="co"># Build the entire website to _site/</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish              <span class="co"># Publish to configured hosting service</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="content-management" class="level3">
+<h3 class="anchored" data-anchor-id="content-management">Content Management</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project blog  <span class="co"># Create new blog post structure</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="development-notes" class="level2">
+<h2 class="anchored" data-anchor-id="development-notes">Development Notes</h2>
+<ul>
+<li>Blog posts use YAML frontmatter with <code>title</code>, <code>author</code>, <code>date</code>, and <code>toc</code> fields</li>
+<li>Images should be placed in <code>posts/{post-name}/images/</code> directory</li>
+<li>The site uses automatic execution freezing (<code>freeze: auto</code>) to cache computational results</li>
+<li>Custom fonts (Atkinson Hyperlegible for body text, Fira Code for code) are loaded via Google Fonts</li>
+<li>Google Analytics is configured with ID ‘G-4BTEYBVWPE’</li>
+</ul>
+</section>
+<section id="content-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="content-guidelines">Content Guidelines</h2>
+<ul>
+<li>Posts focus on data visualization, machine learning, and data science topics</li>
+<li>Include proper attribution for data sources</li>
+<li>Use relative paths for images within post directories</li>
+<li>Follow the established naming convention for post directories (lowercase with hyphens)</li>
+</ul>
 
 
-</header>
-
-
-<p>When comparing two distinct groups, like Men vs.&nbsp;Women or Product A vs.&nbsp;Product B, the standard bar chart often falls short. It shows you the volume, but it does not always show you the structure.</p>
-<p>Enter the Pyramid Chart.</p>
-<p>At its core, a pyramid chart is deceptively simple. It is two bar charts joined by a central spine, facing opposite directions. It is the gold standard for demographic data because it allows our eyes to instantly compare the symmetry (or asymmetry) between two groups. But the real magic happens when you animate it.</p>
-<p>A static pyramid chart is a snapshot in time. It tells you what the population looked like in 1990. But data rarely sits still. Populations age, customer bases shift, and trends evolve.</p>
-<p>When you apply animation to a pyramid chart over a time axis, you stop looking at bars and start looking at a shifting silhouette.</p>
-<p>Singapore Population Pyramid (1970-2024): Watch how, in the earlier years, the pyramid sits on a wide base, indicating a predominantly young population. As the animation progresses into later years, that base narrows while the upper sections expand. You can literally see the “weight” of the population shift upward as the distribution moves from young to old.</p>
-<p><img src="./images/sg-population-pyramid.gif" class="img-fluid"></p>
-<div style="text-align: right; font-size: 12px">
-SOURCE: <a href="https://tablebuilder.singstat.gov.sg/table/TS/M810671">DEPARTMENT OF STATISTICS, Singapore</a>
-</div>
-<!-- SOURCE: [DEPARTMENT OF STATISTICS, Singapore](https://tablebuilder.singstat.gov.sg/table/TS/M810671) -->
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -749,5 +817,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
