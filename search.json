@@ -53,13 +53,13 @@
     "href": "index.html",
     "title": "The Data Sketchbook",
     "section": "",
-    "text": "👋 Welcome to The Data Sketchbook\nHi, my name is Srinidhi. My interests are in data-driven decision science and systems programming. I started this blog to document my learning.\n\n\nPosts\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nMarch 21, 2025\n\n\nThe Living Shape of Data: Animate Your Pyramid Charts\n\n\n\n\n\nNo matching items"
+    "text": "👋 Welcome to The Data Sketchbook\nI am a computational scientist with a focus on data science. I started this blog to document my learnings related to data visualization and causal AI. Some posts feature reproductions of visualizations from Flowing Data and insights from books I am studying, such as The Visual Display of Quantitative Information and Effective Visualization.\nRecently, I took a break from the industry to explore the use of LLMs in Automated Program Repair and Software Engineering education at SUTD. You can find the report here.\nPreviously, I worked on developing medical risk prediction models and conducted research in computational neuroscience at the Max Planck Institute.\n\n\nPosts\n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nMarch 21, 2025\n\n\nSingapore Population Pyramid (1970-2024)\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/sg-population/index.html",
     "href": "posts/sg-population/index.html",
-    "title": "The Living Shape of Data: Animate Your Pyramid Charts",
+    "title": "Singapore Population Pyramid (1970-2024)",
     "section": "",
-    "text": "When comparing two distinct groups, like Men vs. Women or Product A vs. Product B, the standard bar chart often falls short. It shows you the volume, but it does not always show you the structure.\nEnter the Pyramid Chart.\nAt its core, a pyramid chart is deceptively simple. It is two bar charts joined by a central spine, facing opposite directions. It is the gold standard for demographic data because it allows our eyes to instantly compare the symmetry (or asymmetry) between two groups. But the real magic happens when you animate it.\nA static pyramid chart is a snapshot in time. It tells you what the population looked like in 1990. But data rarely sits still. Populations age, customer bases shift, and trends evolve.\nWhen you apply animation to a pyramid chart over a time axis, you stop looking at bars and start looking at a shifting silhouette.\nSingapore Population Pyramid (1970-2024): Watch how, in the earlier years, the pyramid sits on a wide base, indicating a predominantly young population. As the animation progresses into later years, that base narrows while the upper sections expand. You can literally see the “weight” of the population shift upward as the distribution moves from young to old.\n\n\nSOURCE: DEPARTMENT OF STATISTICS, Singapore"
+    "text": "Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.\n\n\nSOURCE: DEPARTMENT OF STATISTICS, Singapore"
   }
 ]
