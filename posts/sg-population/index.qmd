@@ -28,8 +28,8 @@ When you apply animation to a pyramid chart over a time axis, you stop looking a
 Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.
 
 ::: {layout-ncol=2}
-<details>
-<summary>Python: Data Processing</summary>
+::: {.callout-note collapse="true"}
+## Python: Data Processing
 
 ```python
 import pandas as pd
@@ -60,11 +60,10 @@ def process_data(csv_file):
 
 process_data('Book1.csv')
 ```
+:::
 
-</details>
-
-<details>
-<summary>R: Animation Code</summary>
+::: {.callout-note collapse="true"}
+## R: Animation Code
 
 ```r
 library(plotrix)
@@ -102,8 +101,7 @@ saveGIF(
     interval=0.15, nmax=100, ani.width=650, ani.height=400
 )
 ```
-
-</details>
+:::
 :::
 
 <!-- SOURCE: [DEPARTMENT OF STATISTICS, Singapore](https://tablebuilder.singstat.gov.sg/table/TS/M810671) -->
