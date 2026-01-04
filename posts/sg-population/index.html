@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -168,6 +202,77 @@ gtag('config', 'G-4BTEYBVWPE', { 'anonymize_ip': true});
 </header>
 
 
+<details>
+<summary>
+Show Python Data Processing Code
+</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_data(csv_file):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    population <span class="op">=</span> pd.read_csv(csv_file)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    total_population <span class="op">=</span> (</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        population</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        .groupby(<span class="st">'year'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        .agg({<span class="st">'total_pop'</span>:<span class="st">'sum'</span>, <span class="st">'male_pop'</span>:<span class="st">'sum'</span>, <span class="st">'female_pop'</span>:<span class="st">'sum'</span>})</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        .rename(columns<span class="op">=</span>{<span class="st">'male_pop'</span>:<span class="st">'total_male_pop'</span>, <span class="st">'female_pop'</span>:<span class="st">'total_female_pop'</span>})</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        .reset_index()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    df_merged <span class="op">=</span> (</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        population.merge(total_population[[<span class="st">'year'</span>, <span class="st">'total_male_pop'</span>, <span class="st">'total_female_pop'</span>]], on<span class="op">=</span><span class="st">'year'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    df_merged[<span class="st">'male_pct'</span>] <span class="op">=</span> ((df_merged[<span class="st">'male_pop'</span>] <span class="op">/</span> df_merged[<span class="st">'total_male_pop'</span>]) <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    df_merged[<span class="st">'female_pct'</span>] <span class="op">=</span> ((df_merged[<span class="st">'female_pop'</span>] <span class="op">/</span> df_merged[<span class="st">'total_female_pop'</span>]) <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    df_merged[<span class="st">'sex_ratio'</span>] <span class="op">=</span> ((df_merged[<span class="st">'male_pop'</span>] <span class="op">/</span> df_merged[<span class="st">'female_pop'</span>])<span class="op">*</span><span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    df_merged <span class="op">=</span> df_merged[[<span class="st">'year'</span>, <span class="st">'age'</span>, <span class="st">'total_pop'</span>, <span class="st">'male_pop'</span>, <span class="st">'female_pop'</span>, <span class="st">'male_pct'</span>, <span class="st">'female_pct'</span>, <span class="st">'sex_ratio'</span>]]</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    df_merged.sort_values(by<span class="op">=</span>[<span class="st">'year'</span>, <span class="st">'age'</span>], ascending<span class="op">=</span>[<span class="va">True</span>,<span class="va">True</span>])</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    df_merged.to_csv(<span class="st">'population_SG.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>process_data(<span class="st">'Book1.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<details>
+<summary>
+Show R Animation Code
+</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotrix)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(animation)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"population_SG.csv"</span>, <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> population <span class="sc">|&gt;</span> <span class="fu">sort_by</span>(<span class="sc">~</span> <span class="fu">list</span>(year))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>ages <span class="ot">&lt;-</span> <span class="fu">unique</span>(population<span class="sc">$</span>age)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ani.options</span>(<span class="at">outdir =</span> <span class="fu">paste</span>(<span class="fu">getwd</span>(), <span class="st">"/images"</span>, <span class="at">sep =</span> <span class="st">""</span>))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">saveGIF</span>(</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (y <span class="cf">in</span> <span class="fu">unique</span>(population<span class="sc">$</span>year)) {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        pop_year <span class="ot">&lt;-</span> <span class="fu">subset</span>(population, year <span class="sc">==</span> y <span class="sc">&amp;</span> age <span class="sc">%in%</span> ages)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        female <span class="ot">&lt;-</span> pop_year<span class="sc">$</span>female_pct</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        male <span class="ot">&lt;-</span> pop_year<span class="sc">$</span>male_pct</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">par</span>(<span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">2</span>))</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pyramid.plot</span>(</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            male,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>            female,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            <span class="at">top.labels =</span> <span class="fu">c</span>(<span class="st">"Male"</span>, <span class="st">""</span>, <span class="st">"Female"</span>),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">labels =</span> ages,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="at">main =</span> y,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            <span class="at">lxcol =</span> <span class="st">"#A097CC"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            <span class="at">rxcol =</span> <span class="st">"#EDBFBE"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>            <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">15</span>,<span class="dv">15</span>),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            <span class="at">gap =</span> <span class="dv">0</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        <span class="fu">text</span>(<span class="at">x =</span> <span class="dv">0</span>,  <span class="co"># Center position</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> <span class="sc">-</span><span class="dv">18</span>,  <span class="co"># Position below the plot</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>             <span class="at">labels =</span> <span class="st">"Source: SINGAPORE DEPARTMENT OF STATISTICS"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>             <span class="at">cex =</span> <span class="fl">0.8</span>,  <span class="co"># Text size</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>             <span class="at">adj =</span> <span class="fl">0.5</span>)  <span class="co"># Center alignment</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">movie.name =</span> <span class="st">"population-pyramid-animated.gif"</span>, </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">interval=</span><span class="fl">0.15</span>, <span class="at">nmax=</span><span class="dv">100</span>, <span class="at">ani.width=</span><span class="dv">650</span>, <span class="at">ani.height=</span><span class="dv">400</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <p>Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.</p>
 <p><img src="./images/sg-population-pyramid.gif" class="img-fluid"></p>
 <div style="text-align: right; font-size: 12px">
