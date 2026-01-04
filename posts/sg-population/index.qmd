@@ -11,7 +11,9 @@ format:
 # draft: false
 # order: 1
 ---
+When comparing two distinct groups—like Men vs. Women or Product A vs. Product B—the standard bar chart often falls short. It shows you the volume, but it does not always show you the structure.
 
+Enter the Pyramid Chart.
 <details>
 <summary>Show Python Data Processing Code</summary>
 
@@ -89,7 +91,11 @@ saveGIF(
 
 </details>
 
-The data was collected from the Department of Statistics, Singapore.
+At its core, a pyramid chart is deceptively simple: it is two bar charts joined by a central spine, facing opposite directions. It is the gold standard for demographic data because it allows our eyes to instantly compare the symmetry (or asymmetry) between two groups. But the real magic happens when you animate it.
+
+A static pyramid chart is a snapshot in time. It tells you what the population looked like in 1990. But data rarely sits still. Populations age, customer bases shift, and trends evolve.
+
+When you apply animation to a pyramid chart over a time axis, you stop looking at bars and start looking at a shifting silhouette
 
 Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.
 
