@@ -89,6 +89,8 @@ saveGIF(
 
 </details>
 
+The data was collected from the Department of Statistics, Singapore.
+
 Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.
 
 ![](./images/sg-population-pyramid.gif)
