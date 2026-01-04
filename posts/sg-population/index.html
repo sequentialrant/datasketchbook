@@ -203,11 +203,37 @@ gtag('config', 'G-4BTEYBVWPE', { 'anonymize_ip': true});
 
 
 <p>When comparing two distinct groups—like Men vs.&nbsp;Women or Product A vs.&nbsp;Product B—the standard bar chart often falls short. It shows you the volume, but it does not always show you the structure.</p>
-Enter the Pyramid Chart.
+<p>Enter the Pyramid Chart.</p>
+<p>At its core, a pyramid chart is deceptively simple: it is two bar charts joined by a central spine, facing opposite directions. It is the gold standard for demographic data because it allows our eyes to instantly compare the symmetry (or asymmetry) between two groups. But the real magic happens when you animate it.</p>
+<p>A static pyramid chart is a snapshot in time. It tells you what the population looked like in 1990. But data rarely sits still. Populations age, customer bases shift, and trends evolve.</p>
+<p>When you apply animation to a pyramid chart over a time axis, you stop looking at bars and start looking at a shifting silhouette</p>
+<p><img src="./images/sg-population-pyramid.gif" class="img-fluid"></p>
+<div style="text-align: right; font-size: 12px">
+SOURCE: <a href="https://tablebuilder.singstat.gov.sg/table/TS/M810671">DEPARTMENT OF STATISTICS, Singapore</a>
+</div>
+<p>Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <details>
+</details></div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <summary>
-Show Python Data Processing Code
-</summary>
+</summary></div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+Python: Data Processing
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_data(csv_file):</span>
@@ -235,11 +261,29 @@ Show Python Data Processing Code
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    df_merged.to_csv(<span class="st">'population_SG.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>process_data(<span class="st">'Book1.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <details>
+</details></div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <summary>
-Show R Animation Code
-</summary>
+</summary></div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+R: Animation Code
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotrix)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(animation)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -274,14 +318,11 @@ Show R Animation Code
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">movie.name =</span> <span class="st">"population-pyramid-animated.gif"</span>, </span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">interval=</span><span class="fl">0.15</span>, <span class="at">nmax=</span><span class="dv">100</span>, <span class="at">ani.width=</span><span class="dv">650</span>, <span class="at">ani.height=</span><span class="dv">400</span></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<p>At its core, a pyramid chart is deceptively simple: it is two bar charts joined by a central spine, facing opposite directions. It is the gold standard for demographic data because it allows our eyes to instantly compare the symmetry (or asymmetry) between two groups. But the real magic happens when you animate it.</p>
-<p>A static pyramid chart is a snapshot in time. It tells you what the population looked like in 1990. But data rarely sits still. Populations age, customer bases shift, and trends evolve.</p>
-<p>When you apply animation to a pyramid chart over a time axis, you stop looking at bars and start looking at a shifting silhouette</p>
-<p>Observe how, in the earlier years, the younger age groups make up a larger proportion of the population, as indicated by the wider base. In later years, the older age groups occupy a larger share, while the younger age groups appear relatively smaller. This is reflected in the changing shape of the pyramid, with a gradual shift in the distribution across different age categories.</p>
-<p><img src="./images/sg-population-pyramid.gif" class="img-fluid"></p>
-<div style="text-align: right; font-size: 12px">
-SOURCE: <a href="https://tablebuilder.singstat.gov.sg/table/TS/M810671">DEPARTMENT OF STATISTICS, Singapore</a>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+</div>
 </div>
 <!-- SOURCE: [DEPARTMENT OF STATISTICS, Singapore](https://tablebuilder.singstat.gov.sg/table/TS/M810671) -->
 
